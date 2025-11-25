@@ -7,12 +7,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MONGO_URI="mongodb://localhost:27017/"    ### local instance MongoDB
+#MONGO_URI="mongodb://localhost:27017/"    ### local instance MongoDB
+
 ###MONGO_URI='mongodb+srv://pabi:Pabi1234@cluster-1.hq2achw.mongodb.net/?appName=Cluster-1'
-#MONGO_URI=os.getenv("MONGO_URI") ##from .env file 
+
+MONGO_URI=os.getenv("MONGO_URI") ##from .env file 
 client=AsyncIOMotorClient(MONGO_URI)  ## MongoDB connection
-db=client["demodb"]
-db_coll=db["demo_coll"]
+db=client["appdb"]
+db_coll=db["app_coll"]
 
 #print ("db name:",db)
 #print ("coll name:",db_coll)
