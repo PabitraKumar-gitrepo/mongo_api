@@ -1,0 +1,39 @@
+mongodb connection url
+mongodb+srv://pabi:Pabi1234@democluster.wjjpah4.mongodb.net/?appName=DemoCluster
+
+
+mongodb library to be installed
+python -m pip install "pymongo[srv]==3.11"
+
+requirements.txt
+we have all the libraries to be installed mentioned in requirements.txt
+
+python virtual environment
+we need to create separate environment for each different process.
+its like a separate folder.
+
+create python virtual environment
+
+run this command - python -m venv mytestenv
+
+then activate this python virtual environment
+take the activate path from virtual environment folder.
+
+mytestenv -> Scripts -> activate  - mytestenv/Scripts/activate -- you may get security error bcoz powershell
+blocks running scripts by default.
+
+run this command in windows powershell as admin 
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+then again run activate in vs code terminal -mytestenv/Scripts/activate
+
+all the libraries then to be installed here in my python virtual env folder
+
+
+then install all the libraries from requirements.txt file. - its like bulk installation.
+
+command - pip install -r requirements.txt (make sure that you are inside the folder where requirements.txt file exists)
+
+or give full path as below
+
+pip install -r C:\Users\YourName\project\requirements.txt
